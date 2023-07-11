@@ -1,13 +1,14 @@
-# Prompt user for score
-score = input("Your Score between 0.0 and 1.0: ")
+# Prompt the user for a score
+score = input("Your score between 0.0 and 0.9: ")
 
-# Define the computepay function
+# Define computepay function taking argument score
+
 def computepay(score):
+    try:
+        score = float(score)
 
-    score = float(score)
-
-    if 0.0 <= score <= 1.0:
-        try:
+        if 0.0 <= score <= 1.0:
+            # Grade Calculation Logic
             if score >= 0.9:
                 print("A")
             elif score >= 0.8:
@@ -18,12 +19,11 @@ def computepay(score):
                 print("D")
             elif score < 0.6:
                 print("F")
+        else:
+             print("Bad Score")
 
-        except ValueError:
-            print("Bad Score")
-
-    else:
+    except ValueError:
         print("Bad Score")
 
-# Call the function computepay
+# Call the computepay function
 computepay(score)
