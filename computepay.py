@@ -2,11 +2,11 @@
 
 def computepay(hours, rate):
     gross_pay = hours * rate
-    print(gross_pay)
+    return gross_pay
 
 def overtime_computepay(hours, rate):
     new_gross_pay = regular_pay + overtime_pay
-    print(new_gross_pay)
+    return new_gross_pay
 
 # Prompt user for working hours
 hours = input("Total number of working hours: ")
@@ -28,10 +28,10 @@ try:
         overtime_pay = overtime_hours * overtime_rate
     
         # Print the gross pay
-        overtime_computepay(hours, rate)
+        print("Pay", overtime_computepay(hours, rate))
     
     else:
-        computepay(hours, rate)
+       print("Pay", computepay(hours, rate))
 
 except ValueError:
     print("Please enter a numerical value")
