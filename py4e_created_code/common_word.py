@@ -1,12 +1,15 @@
+# Get the name of the file and open it
 name = input('Enter file:')
 handle = open(name, 'r')
-counts = dict()
 
+# Count word frequency
+counts = dict()
 for line in handle:
     words = line.split()
     for word in words:
         counts[word] = counts.get(word, 0) + 1
 
+# Find the most common word
 bigcount = None
 bigword = None
 for word, count in list(counts.items()):
@@ -14,6 +17,7 @@ for word, count in list(counts.items()):
         bigword = word
         bigcount = count
 
+# All
 print(bigword, bigcount)
 
 # Code: http://www.py4e.com/code3/words.py
