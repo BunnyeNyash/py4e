@@ -2,7 +2,7 @@
 name = input('Enter file:')
 handle = open(name, 'r')
 
-# Count word frequency
+# Count word frequency (make a histogram)
 counts = dict()
 for line in handle:
     words = line.split()
@@ -17,7 +17,7 @@ for word, count in list(counts.items()):
         bigword = word
         bigcount = count
 
-# All
+# All done (print the stuff out)
 print(bigword, bigcount)
 
 # Code: http://www.py4e.com/code3/words.py
