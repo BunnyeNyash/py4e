@@ -6,6 +6,9 @@ while True:
     # prompt user for an integer number
     num = input("Enter a number: ")
 
+    if num == "done":
+        break
+
     try:
         num = int(num)
 
@@ -17,9 +20,6 @@ while True:
 
     except ValueError:
         print("Invalid input")
-
-    if num == "done":
-        break
 
 if smallest != None and largest != None:
     print("Maximum is", largest)
